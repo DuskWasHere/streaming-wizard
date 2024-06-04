@@ -1,14 +1,14 @@
-import type { Accessor, Component, Setter } from 'solid-js';
+import type { Component } from 'solid-js';
 
 import styles from './Query.module.css';
 
 export interface QueryProps {
-  ref: HTMLInputElement;
+  inputRef: (el: HTMLInputElement) => void;
 }
 
 export const Query: Component<QueryProps> = (props) => {
   return (
-    <input ref={props.ref} class={styles.Query}
+    <input ref={props.inputRef} class={styles.Query}
       type="text"
     />
   );

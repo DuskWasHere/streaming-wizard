@@ -1,5 +1,5 @@
 import { createSignal, type Component } from 'solid-js';
-import {SSE, _SSEvent} from 'sse.js';
+import { SSE, _SSEvent } from 'sse.js';
 
 import styles from './App.module.css';
 import { TextCompletion } from './components/TextCompletion';
@@ -72,7 +72,7 @@ const App: Component = () => {
       <h2 class={styles.SubHeader}>🔮</h2>
 
       <form onSubmit={preventDefault(() => start(queryRef.value))}>
-        <Query ref={(el) => queryRef = el} />
+        <Query inputRef={(el) => queryRef = el} />
       </form>
 
       <span class={styles.Spacer}></span>
